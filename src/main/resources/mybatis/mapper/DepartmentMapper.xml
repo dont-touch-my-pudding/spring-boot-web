@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pudding.mapper.DepartmentMapper">
+    <select id="selectAll" resultType="department">
+        select * from department
+    </select>
+
+    <select id="selectById" parameterType="int" resultType="department">
+        select * from department where id=#{id}
+    </select>
+</mapper>
